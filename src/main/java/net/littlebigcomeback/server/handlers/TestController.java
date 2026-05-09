@@ -9,7 +9,7 @@ public class TestController {
     @GetMapping("*")
     public String printReq(RequestEntity<String> req) {
         //we should switch to log4j at some point
-        System.out.println("Got a "+ req.getMethod() +" request: " + req.getUrl() + " : " + req.getBody());
+        System.out.println("Got a "+ req.getMethod() +" request: " + req.getUrl() + " : " + req.getBody() + " : \n\n" + req.getHeaders() + "\n");
         return "test";
     }
 }
